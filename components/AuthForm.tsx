@@ -82,11 +82,11 @@ const AuthForm = <T extends FieldValues> ({type, schema, defaultValues, onSubmit
                                     <FormControl>
                                         {field.name === "universityCard" ? (
                                             <FileUpload
-                                                // type="image"
-                                                // accept="image/*"
-                                                // placeholder="Upload your ID"
-                                                // folder="ids"
-                                                // variant="dark"
+                                                type="image"
+                                                accept="image/*"
+                                                placeholder="Upload your ID"
+                                                folder="ids"
+                                                variant="dark"
                                                 onFileChange={field.onChange}
                                             />
                                         ) : (

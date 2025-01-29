@@ -30,7 +30,7 @@ const Page = () => {
                 coverColor: book.color,
                 coverUrl: book.cover,
                 videoUrl: book.video,
-                summary: book.summary
+                summary: book.summary,
             }))} />
         </>
     );
