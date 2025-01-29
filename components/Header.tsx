@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-// import { signOut } from "@/auth";
+import { signOut } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import { Session } from "next-auth";
@@ -26,7 +26,7 @@ const Header = ({session} : {session:Session}) => {
                         action={async () => {
                             "use server";
 
-                            // await signOut();
+                            await signOut();
                         }}
                         className="mb-10"
                     >
