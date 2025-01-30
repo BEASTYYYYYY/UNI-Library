@@ -11,5 +11,21 @@ const {
 const imagekit = new ImageKit({ publicKey, privateKey, urlEndpoint });
 
 export async function GET() {
-    return NextResponse.json(imagekit.getAuthenticationParameters());
+    const response = NextResponse.json(imagekit.getAuthenticationParameters());
+
+    // Set CORS headers
+    response.headers.set("Access-Control-Allow-Origin", "https://uni-library-juvc92osv-beastyyyyyys-projects.vercel.app"); // Allow only your frontend
+    response.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+    return response;
+}
+
+// Handle OPTIONS preflight requests
+export async function OPTIONS() {
+    const response = new NextResponse(null, { status: 204 }); // No content response
+    response.headers.set("Access-Control-Allow-Origin", "https://uni-library-juvc92osv-beastyyyyyys-projects.vercel.app");
+    response.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    return response;
 }
