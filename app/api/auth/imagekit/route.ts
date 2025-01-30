@@ -14,7 +14,7 @@ export async function GET() {
     const response = NextResponse.json(imagekit.getAuthenticationParameters());
 
     // Set CORS headers
-    response.headers.set("Access-Control-Allow-Origin", "https://uni-library-4fh9odmnf-beastyyyyyys-projects.vercel.app"); // Allow only your frontend
+    response.headers.set("Access-Control-Allow-Origin", "https://uni-library-seven.vercel.app"); // Allow only your frontend
     response.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
     response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
