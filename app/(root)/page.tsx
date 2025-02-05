@@ -1,11 +1,9 @@
 import { auth } from "@/auth";
 import BookList from "@/components/BookList";
 import BookOverview from "@/components/BookOverview";
-import { sampleBooks } from "@/constants";
 import { db } from "@/database/drizzle";
 import { books } from "@/database/schema";
 import { desc } from "drizzle-orm";
-import Image from "next/image";
 
 const Home = async () => {
   const session = await auth();
